@@ -1,0 +1,48 @@
+.header
+    height: 10rem
+    width: 100%
+    background-color: $color-light-green
+    display: flex
+    align-items: center
+    &__nav
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__logo
+        display: flex
+        align-items: center
+        fill: $color-green
+        color: $color-green
+        svg
+            width: 3.5rem
+            height: 3.5rem
+            margin-right: .8rem
+
+.nav
+    &__items
+        display: flex
+    &__item
+        margin-right: 6rem
+    &__link
+        color: $color-main
+        &:hover
+            color: $color-green
+        &:focus
+            background-color: $color-light-green
+            color: $color-main
+        &:active
+            color: $color-green
+        &:last-child
+            margin-right: 0
+        img
+            &:hover
+                color: $color-green
+
+.icon-cart
+    width: 2.4rem
+    height: 2.4rem
+    fill: $color-light-green
+    stroke: $color-main
+    &:hover
+        stroke: $color-green
+

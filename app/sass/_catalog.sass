@@ -1,0 +1,60 @@
+.catalog-wrapper
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 3rem
+    margin-bottom: 7rem
+
+.catalog-box
+    grid-column: 1 / -1
+    display: flex
+    justify-content: space-between
+    align-items: center
+    
+.catalog-title
+    line-height: 4.4rem
+    font-weight: 400
+
+.catalog-tabs
+    &__tab
+        font-size: 2rem
+        border: none
+        border-radius: 2rem
+        padding: 1rem 2rem
+        background-color: #D4E8D9
+        margin-right: 3.2rem
+        cursor: pointer
+        &:last-child
+            margin-right: 0
+        &:hover
+            color: $color-white
+            background-color: $color-dark-green
+            transition: .3s all
+    
+.catalog-card
+    background-color: $color-card
+    max-width: 35rem
+    max-height: 73rem
+    padding: 2rem
+    &__img
+        margin-bottom: 2rem
+    &__artist
+        color: #86928B
+        margin-bottom: 1rem
+        line-height: 2.1rem
+    &__title
+        font-weight: 400
+        margin-bottom: 0.8rem
+        line-height: 3.5rem
+    &__parameters
+        margin-bottom: 3rem
+        line-height: 2.1rem
+    &__price
+        color: $color-green
+        font-size: 2.4rem
+        line-height: 2.8rem
+        margin-bottom: 2rem
+    &__btn
+        background-color: $color-card
+        width: 100%
+
+
