@@ -1,21 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
 <header>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>House</title>
-        <link rel="stylesheet" href="css/style.css" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-        />
-      </head>
-      <body>
+    
         <header class="header">
           <div class="container">
             <nav class="header__nav">
@@ -42,8 +43,6 @@
             </nav>
           </div>
         </header>
-      </body>
-    </html>
     
 </header>
 
@@ -66,67 +65,174 @@
 </div>
 
 <div class="catalog">
-    <div class="container">
-        <div class="catalog-wrapper">
-            <div class="catalog-box">
-                <h2 class="catalog-title title-2">Репродукции</h2>
-                <div class="catalog-tabs">
-                    <button class="catalog-tabs__tab">Франция</button>
-                    <button class="catalog-tabs__tab">Германия</button>
-                    <button class="catalog-tabs__tab">Англия</button>
-                </div>
-            </div>
-            <div class="catalog-card">
-                <img src="../images/card-1.webp" alt="" class="catalog-card__img">
-                <p class="catalog-card__artist">Марсель Руссо</p>
-                <h3 class="catalog-card__title title-3">Охота Амура</h3>
-                <p class="catalog-card__parameters">Холст, масло (50х80)</p>
-                <p class="catalog-card__price">14 500 руб</p>
-                <button class="catalog-card__btn btn">В корзину</button>
-            </div>
-            <div class="catalog-card">
-                <img src="../images/card-2.webp" alt="" class="catalog-card__img">
-                <p class="catalog-card__artist">Анри Селин</p>
-                <h3 class="catalog-card__title title-3">Дама с собачкой</h3>
-                <p class="catalog-card__parameters">Акрил, бумага (50х80) </p>
-                <p class="catalog-card__price">16 500 руб</p>
-                <button class="catalog-card__btn btn">В корзину</button>
-            </div>
-            <div class="catalog-card">
-                <img src="../images/card-3.webp" alt="" class="catalog-card__img">
-                <p class="catalog-card__artist">Франсуа Дюпон</p>
-                <h3 class="catalog-card__title title-3">Процедура</h3>
-                <p class="catalog-card__parameters">Цветная литография (40х60) </p>
-                <p class="catalog-card__price">20 000 руб</p>
-                <button class="catalog-card__btn btn">В корзину</button>
-            </div>
-            <div class="catalog-card">
-                <img src="../images/card-4.webp" alt="" class="catalog-card__img">
-                <p class="catalog-card__artist">Луи Детуш</p>
-                <h3 class="catalog-card__title title-3">Роза</h3>
-                <p class="catalog-card__parameters">Бумага, акрил (50х80)</p>
-                <p class="catalog-card__price">12 000 руб</p>
-                <button class="catalog-card__btn btn">В корзину</button>
-            </div>
-            <div class="catalog-card">
-                <img src="../images/card-5.webp" alt="" class="catalog-card__img">
-                <p class="catalog-card__artist">Франсуа Дюпон</p>
-                <h3 class="catalog-card__title title-3">Птичья трапеза</h3>
-                <p class="catalog-card__parameters">Цветная литография (40х60)</p>
-                <p class="catalog-card__price">22 500 руб</p>
-                <button class="catalog-card__btn btn">В корзину</button>
-            </div>
-            <div class="catalog-card">
-                <img src="../images/card-6.webp" alt="" class="catalog-card__img">
-                <p class="catalog-card__artist">Пьер Моранж</p>
-                <h3 class="catalog-card__title title-3">Пейзаж с рыбой</h3>
-                <p class="catalog-card__parameters">Цветная литография (40х60)</p>
-                <p class="catalog-card__price">20 000 руб</p>
-                <button class="catalog-card__btn btn">В корзину</button>
-            </div>
+  <div class="container">
+    <div class="catalog-wrapper">
+      <div class="catalog-box">
+        <h2 class="catalog-title title-2">Репродукции</h2>
+        <div class="catalog-tabs">
+          <button class="catalog-tabs__tab tab active" data-tab="1">
+            Франция
+          </button>
+          <button class="catalog-tabs__tab tab" data-tab="2">Германия</button>
+          <button class="catalog-tabs__tab tab" data-tab="3">Англия</button>
         </div>
+      </div>
+      <div class="card">
+        <div data-tab-content="1" class="cards-wrapper active">
+          <div class="catalog-card">
+            <img src="../images/card-1.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Марсель Руссо</p>
+            <h3 class="catalog-card__title title-3">Охота Амура</h3>
+            <p class="catalog-card__parameters">Холст, масло (50х80)</p>
+            <p class="catalog-card__price">14 500 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+          <div class="catalog-card">
+            <img src="../images/card-2.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Анри Селин</p>
+            <h3 class="catalog-card__title title-3">Дама с собачкой</h3>
+            <p class="catalog-card__parameters">Акрил, бумага (50х80)</p>
+            <p class="catalog-card__price">16 500 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+          <div class="catalog-card">
+            <img src="../images/card-3.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Франсуа Дюпон</p>
+            <h3 class="catalog-card__title title-3">Процедура</h3>
+            <p class="catalog-card__parameters">Цветная литография (40х60)</p>
+            <p class="catalog-card__price">20 000 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+          <div class="catalog-card">
+            <img src="../images/card-4.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Луи Детуш</p>
+            <h3 class="catalog-card__title title-3">Роза</h3>
+            <p class="catalog-card__parameters">Бумага, акрил (50х80)</p>
+            <p class="catalog-card__price">12 000 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+          <div class="catalog-card">
+            <img src="../images/card-5.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Франсуа Дюпон</p>
+            <h3 class="catalog-card__title title-3">Птичья трапеза</h3>
+            <p class="catalog-card__parameters">Цветная литография (40х60)</p>
+            <p class="catalog-card__price">22 500 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+          <div class="catalog-card">
+            <img src="../images/card-6.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Пьер Моранж</p>
+            <h3 class="catalog-card__title title-3">Пейзаж с рыбой</h3>
+            <p class="catalog-card__parameters">Цветная литография (40х60)</p>
+            <p class="catalog-card__price">20 000 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+        </div>
+        <div data-tab-content="2" class="cards-wrapper">
+          <div class="catalog-card">
+            <img src="../images/card-7.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Марсель Руссо</p>
+            <h3 class="catalog-card__title title-3">Охота Амура</h3>
+            <p class="catalog-card__parameters">Холст, масло (50х80)</p>
+            <p class="catalog-card__price">14 500 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+          <div class="catalog-card">
+            <img src="../images/card-8.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Анри Селин</p>
+            <h3 class="catalog-card__title title-3">Дама с собачкой</h3>
+            <p class="catalog-card__parameters">Акрил, бумага (50х80)</p>
+            <p class="catalog-card__price">16 500 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+          <div class="catalog-card">
+            <img src="../images/card-9.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Франсуа Дюпон</p>
+            <h3 class="catalog-card__title title-3">Процедура</h3>
+            <p class="catalog-card__parameters">Цветная литография (40х60)</p>
+            <p class="catalog-card__price">20 000 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+          <div class="catalog-card">
+            <img src="../images/card-10.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Луи Детуш</p>
+            <h3 class="catalog-card__title title-3">Роза</h3>
+            <p class="catalog-card__parameters">Бумага, акрил (50х80)</p>
+            <p class="catalog-card__price">12 000 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+          <div class="catalog-card">
+            <img src="../images/card-11.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Франсуа Дюпон</p>
+            <h3 class="catalog-card__title title-3">Птичья трапеза</h3>
+            <p class="catalog-card__parameters">Цветная литография (40х60)</p>
+            <p class="catalog-card__price">22 500 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+          <div class="catalog-card">
+            <img src="../images/card-12.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Пьер Моранж</p>
+            <h3 class="catalog-card__title title-3">Пейзаж с рыбой</h3>
+            <p class="catalog-card__parameters">Цветная литография (40х60)</p>
+            <p class="catalog-card__price">20 000 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+        </div>
+        <div data-tab-content="3" class="cards-wrapper">
+          <div class="catalog-card">
+            <img src="../images/card-13.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Марсель Руссо</p>
+            <h3 class="catalog-card__title title-3">Охота Амура</h3>
+            <p class="catalog-card__parameters">Холст, масло (50х80)</p>
+            <p class="catalog-card__price">14 500 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+          <div class="catalog-card">
+            <img src="../images/card-14.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Анри Селин</p>
+            <h3 class="catalog-card__title title-3">Дама с собачкой</h3>
+            <p class="catalog-card__parameters">Акрил, бумага (50х80)</p>
+            <p class="catalog-card__price">16 500 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+          <div class="catalog-card">
+            <img src="../images/card-15.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Франсуа Дюпон</p>
+            <h3 class="catalog-card__title title-3">Процедура</h3>
+            <p class="catalog-card__parameters">Цветная литография (40х60)</p>
+            <p class="catalog-card__price">20 000 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+          <div class="catalog-card">
+            <img src="../images/card-16.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Луи Детуш</p>
+            <h3 class="catalog-card__title title-3">Роза</h3>
+            <p class="catalog-card__parameters">Бумага, акрил (50х80)</p>
+            <p class="catalog-card__price">12 000 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+          <div class="catalog-card">
+            <img src="../images/card-17.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Франсуа Дюпон</p>
+            <h3 class="catalog-card__title title-3">Птичья трапеза</h3>
+            <p class="catalog-card__parameters">Цветная литография (40х60)</p>
+            <p class="catalog-card__price">22 500 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+          <div class="catalog-card">
+            <img src="../images/card-18.webp" alt="" class="catalog-card__img" />
+            <p class="catalog-card__artist">Пьер Моранж</p>
+            <h3 class="catalog-card__title title-3">Пейзаж с рыбой</h3>
+            <p class="catalog-card__parameters">Цветная литография (40х60)</p>
+            <p class="catalog-card__price">20 000 руб</p>
+            <button class="catalog-card__btn btn">В корзину</button>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
+
 <div class="promo">
     <div class="container">
         <div class="promo-wrapper">
@@ -222,3 +328,6 @@
         </div>
     </div>
 </footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,14 +1,11 @@
 .catalog-wrapper
-    display: grid
-    grid-template-columns: repeat(3, 1fr)
-    gap: 3rem
     margin-bottom: 7rem
 
 .catalog-box
-    grid-column: 1 / -1
     display: flex
     justify-content: space-between
     align-items: center
+    margin-bottom: 3rem
     
 .catalog-title
     line-height: 4.4rem
@@ -27,8 +24,21 @@
             margin-right: 0
         &:hover
             color: $color-white
-            background-color: $color-dark-green
+            background-color: $color-green
             transition: .3s all
+        &:focus
+            border: .2rem solid $color-green
+        &:active
+            background-color: $color-dark-green
+
+.cards-wrapper
+    display: none
+
+.cards-wrapper
+    &.active
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 3rem
     
 .catalog-card
     background-color: $color-card

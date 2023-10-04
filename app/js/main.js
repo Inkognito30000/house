@@ -1,53 +1,25 @@
 "use strict";
 
-console.clear();
+let tabNavs = document.querySelectorAll(".catalog-tabs__tab");
+let tabPanes = document.querySelectorAll(".cards-wrapper");
 
-const slider = () => {
-  const slides  = Array.from(document.querySelectorAll('.slider__slide'));
-  const nav     = Array.from(document.querySelectorAll('.slider__nav-btn'));
-  const tabs    = Array.from(document.querySelectorAll('.slider__tab'));
-  
-  let activeSlide = 0;
+for (var i = 0; i < tabNavs.length; i++) {
 
-  slides[activeSlide].classList.add('slider__slide_active');
-  tabs[activeSlide].classList.add('slider__nav-btn_active');
+  tabNavs[i].addEventListener("click", function(e){
+    e.preventDefault();
+    let activeTabAttr = e.target.getAttribute("data-tab");
 
-  nav.forEach(item => {
-    item.addEventListener('click', e => {
-      slides[activeSlide].classList.remove('slider__slide_active');
-      tabs[activeSlide].classList.remove('slider__nav-btn_active');
+    for (var j = 0; j < tabNavs.length; j++) {
+      let contentAttr = tabPanes[j].getAttribute("data-tab-content");
 
-      if(e.target.classList.contains('slider__nav_prev')){
-        if (activeSlide === 0) {
-          activeSlide = slides.length - 1
-        } else{
-          activeSlide--
-        }
+      if (activeTabAttr === contentAttr) {
+        tabNavs[j].classList.add("active");
+        tabPanes[j].classList.add("active"); 
       } else {
-        if (activeSlide === slides.length - 1) {
-          activeSlide = 0
-        } else{
-          activeSlide++
-        }
+        tabNavs[j].classList.remove("active");
+        tabPanes[j].classList.remove("active");
       }
-      slides[activeSlide].classList.add('slider__slide_active');
-      tabs[activeSlide].classList.add('slider__nav-btn_active');
-    })
-  });
-  
-  
-  tabs.forEach((item, i) => {
-    item.addEventListener('click', () => {
-      slides[activeSlide].classList.remove('slider__slide_active');
-      tabs[activeSlide].classList.remove('slider__nav-btn_active');
-
-      activeSlide = i;
-
-      slides[activeSlide].classList.add('slider__slide_active');
-      tabs[activeSlide].classList.add('slider__nav-btn_active');
-    });
+    };
   });
 }
 
-
-slider()

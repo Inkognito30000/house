@@ -3,15 +3,26 @@
     margin-bottom: 7rem
     img
         margin-right: 3rem
+        @media only screen and (max-width : 768px)
+            max-width: 33rem
+            height: 38rem
 
 .hero-box
     height: 62rem
     padding: 14.5rem 0
+    @media only screen and (max-width : 768px)
+        padding: 3.5rem 0
+        height: 38rem
     &__title
         margin-bottom: 2rem
         line-height: 6.6rem
+        @media only screen and (max-width : 768px)
+            font-size: 4rem
+            line-height: 4rem
         span
             color: $color-green
+            @media only screen and (max-width : 768px)
+                font-size: 4rem
     &__text
         margin-bottom: 6rem
         line-height: 2.8rem
