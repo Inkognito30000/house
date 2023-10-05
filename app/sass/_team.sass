@@ -1,20 +1,31 @@
 .team-wrapper
     display: flex
+    @media only screen and (max-width : 768px)
+        display: block
+        margin-bottom: 9rem
     &__left-box
         background: url(../images/frame.webp) no-repeat
         height: 44.5rem
         width: 45rem
         position: relative
         margin-right: 3rem
+        @media only screen and (max-width : 768px)
+            height: 37rem
     &__right-box
         width: 63.5rem
         height: 44.5rem
         padding: 4.5rem 0
+        @media only screen and (max-width : 768px)
+            height: 28.1rem
+            padding: 4rem 0 0 0
+
 
 .brushes
     position: absolute
     left: 4.5rem
     bottom: 12rem
+    @media only screen and (max-width : 768px)
+        bottom: 5rem
 
 .team-title
     font-weight: 400

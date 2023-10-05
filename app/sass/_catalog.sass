@@ -14,7 +14,7 @@
 .catalog-tabs
     &__tab
         font-size: 2rem
-        border: none
+        border: .2rem solid transparent
         border-radius: 2rem
         padding: 1rem 2rem
         background-color: #D4E8D9
@@ -39,14 +39,22 @@
         display: grid
         grid-template-columns: repeat(3, 1fr)
         gap: 3rem
+        @media only screen and (max-width : 768px)
+            grid-template-columns: repeat(2, 1fr)
     
 .catalog-card
     background-color: $color-card
     max-width: 35rem
     max-height: 73rem
     padding: 2rem
+    @media only screen and (max-width : 768px)
+        max-width: 33rem
     &__img
+        max-width: 31rem
+        max-height: 42.2rem
         margin-bottom: 2rem
+        @media only screen and (max-width : 768px)
+            max-width: 29rem
     &__artist
         color: #86928B
         margin-bottom: 1rem

@@ -8,22 +8,33 @@
         display: flex
         align-items: center
         margin-bottom: 2rem
+        @media only screen and (max-width : 768px)
+            margin-bottom: 3rem
+            width: 45rem
         svg
-            width: 12rem
-            height: 12rem
+            max-width: 12rem
+            max-height: 12rem
             stroke: $color-yellow
             stroke-width: 1.5px
             fill: transparent
             margin-right: 2rem
+            @media only screen and (max-width : 768px)
+                width: 9rem
+                height: 9rem
+                
+                
     &__title
         color: $color-white
         line-height: 4rem
         font-weight: 400
     &__text
         color: $color-white
-        line-height: 2.7rem
+        line-height: 150%
         font-weight: 400
         margin-bottom: 6rem
+        @media only screen and (max-width : 768px)
+            margin-bottom: 3rem
+            text-align: left
     &__btn
         color: $color-main
         background-color: $color-yellow
@@ -36,3 +47,6 @@
     z-index: 10
     max-width: 54rem
     padding: 7rem 0
+    @media only screen and (max-width : 768px)
+        position: static
+        max-width: 64rem
