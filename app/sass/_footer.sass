@@ -1,21 +1,38 @@
 .footer
     background-color: #E1EDE6
     height: 16.8rem
+    @media only screen and (max-width : 768px)
+        height: 25rem
 
 .footer-wrapper
     padding: 2.3rem 0
     display: grid
     grid-template-columns: 17rem 44.5rem auto
     justify-content: space-between 
+    @media only screen and (max-width : 768px)
+        grid-template-columns: 2fr 1fr 
+        row-gap: 3rem
+        column-gap: 8rem
 
 .logo-wrapper
     a
         margin-bottom: 3.5rem
+        @media only screen and (max-width : 768px)
+            margin-bottom: 0
+        p
+            font-weight: 700
+    @media only screen and (max-width : 768px)
+        grid-column: 1 / -1
+        display: flex
+        justify-content: space-between
 
 .phone
     a
         color: #86928B
-
+    p
+        @media only screen and (max-width : 768px)
+            margin-bottom: .8rem
+        
 .footer-nav
     display: flex
     &__position
@@ -42,7 +59,6 @@
             svg
                 width: 2.4rem
                 height: 2.4rem
-                
     p
         font-size: 1.2rem
         line-height: 120%
@@ -50,3 +66,8 @@
         margin-bottom: 0.6rem
         &:last-child
             margin-bottom: 0
+    @media only screen and (max-width : 768px)
+        display: flex
+        flex-direction: column
+        justify-self: center
+        
